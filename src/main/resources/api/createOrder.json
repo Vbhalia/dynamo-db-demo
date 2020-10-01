@@ -1,0 +1,7 @@
+{
+	"userName": "Mule",
+	"orderDate": "2020-09-26",
+	"expectedDeliveryDate": "2020-10-01",
+	"shipingAddress": "Toronto, Canada",
+	"billingAddress": "Toronto, Canada"
+}

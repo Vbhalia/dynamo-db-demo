@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: orders
+version: v1
+
+/orders:
+  post:
+    body:
+      application/json:
+        type: !include createOrder.raml
+        example: !include  createOrder.json
+    responses:
+      201:
+        body:
+          application/json:
+            type: !include createOrder-response.raml
+            example: !include createOrder-response.json
+  
+  get:
+    queryParameters:
+      date:
+        type: date-only
+        required: true
+        example: "2015-05-23"
+    responses:
+      200:
+        body:
+          application/json:
+            type: !include getOrders.raml
+            example: !include getOrders.json
+            
